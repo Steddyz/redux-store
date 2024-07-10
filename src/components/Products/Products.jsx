@@ -4,7 +4,7 @@ import cl from "../../styles/Products.module.css";
 import { Link } from "react-router-dom";
 
 export default function Products({ title, products = [], amount, style = {} }) {
-  const list = products.filter((_, i) < amount);
+  const list = products.filter((undefined, i) => i < amount);
 
   return (
     <section className={cl.products} style={style}>
@@ -15,9 +15,7 @@ export default function Products({ title, products = [], amount, style = {} }) {
             <div
               className={cl.image}
               style={{ backgroundImage: `url(${images[0]})` }}
-            >
-              <img />
-            </div>
+            />
 
             <div className={cl.wrapper}>
               <h3 className={cl.title}>{title}</h3>
